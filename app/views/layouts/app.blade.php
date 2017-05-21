@@ -39,6 +39,11 @@
         } );
     </script>
 
+    <!-- Flash slide up -->
+    <script>
+        $('div.alert').delay(3000).slideUp(300);
+    </script>
+
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
 </body>
