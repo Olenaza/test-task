@@ -16,7 +16,7 @@ class CreateEventsTable extends Migration {
         {
             $table->increments('id');
             $table->string('event_title');
-            $table->string('event_start');
+            $table->dateTime('event_start');
             $table->text('event_description');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
@@ -31,6 +31,6 @@ class CreateEventsTable extends Migration {
 	 */
 	public function down()
 	{
-        Schema::drop('events');
+        Schema::drop('medical_events');
 	}
 }
